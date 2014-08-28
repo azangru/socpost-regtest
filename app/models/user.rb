@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   def full_name
-    "#{last_name} #{first_name} #{patronymic_name}"
+    "#{last_name} #{first_name} #{patronymic_name}".strip
   end
 
   # as per the task, email is not a required field and should not be validated
