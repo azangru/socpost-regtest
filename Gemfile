@@ -11,7 +11,6 @@ gem 'pg'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -21,6 +20,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -38,6 +38,17 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem 'devise'
+
+#bootstrap
+gem 'bootstrap-sass', '~> 3.1.1'
+gem 'sprockets-rails', '=2.0.0.backport1'
+gem 'sprockets', '=2.2.2.backport2'
+gem 'sass-rails', github: 'guilleiguaran/sass-rails', branch: 'backport'
+
+# Heroku
+group :production do
+  gem 'rails_12factor'
+end
 
 
 group :development, :test do

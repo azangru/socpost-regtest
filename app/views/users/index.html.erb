@@ -1,0 +1,36 @@
+<%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "navigation-link") %>
+
+<h2>Список зарегистрированных пользователей</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>№</th>
+      <th>Логин</th>
+      <th>ФИО</th>
+      <th>Дата рождения</th>
+      <th>Электронная почта</th>
+    </tr>
+  </thead>
+  <% @users.each_with_index do |u, i| %>
+    <tr>
+      <td><%= i + 1 %></td>
+      <td><%= u.username %></td>
+      <%if u.full_name == "" %>
+        <td><i>(не указано)</i></td>
+      <% else %>
+        <td><%= u.full_name %></td>
+      <% end %>
+      <%if u.date_of_birth %>
+        <td><%= l u.date_of_birth, format: :long %></td>
+      <% else %>
+        <td><i>(не указано)</i></td>
+      <% end %>
+      <%if u.email %>
+        <td><%= u.email%></td>
+      <% else %>
+        <td><i>(не указано)</i></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,17 @@
+#form-outer-container{
+  margin-top: 2em;
+  text-align: center;
+}
+
+#form-inner-container{
+  text-align: left;
+  display: inline-block;
+}
+
+input[type="submit"]{
+  margin-top: 1em;
+}
+
+a.navigation-link {
+  float: right;
+}
