@@ -46,5 +46,4 @@ $ ->
     checkLogin()
     checkPassword()
     if $('#user_username').data('valid') == true and $('#user_password').data('valid') == true
-      alert('hi!')
       $('#new_user').submit()

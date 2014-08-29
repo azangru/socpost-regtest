@@ -26,7 +26,7 @@
       <% else %>
         <td><i>(не указано)</i></td>
       <% end %>
-      <%if u.email %>
+      <%if u.email and u.email != "" %>
         <td><%= u.email%></td>
       <% else %>
         <td><i>(не указано)</i></td>

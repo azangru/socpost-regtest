@@ -1,7 +1,7 @@
 class UsersController < Devise::RegistrationsController
 
   def index
-    @users = User.all
+    @users = User.all.sort_by{|u| u[:username]}
   end
 
   def create
